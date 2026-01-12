@@ -21,6 +21,227 @@ interface AnsweredQuestion {
 }
 
 const questions: Question[] = [
+
+  {
+    id: 1,
+      question: "Qual instrumento foi historicamente usado para medir o tempo antes dos relógios mecânicos??",
+      options: [
+        "Telescópio",
+        "Barômetro",
+        "Ampulheta",
+        "Bússola",
+      ],
+      correctAnswer: 2,
+      explanation: "A ampulheta foi usada para medir intervalos de tempo antes dos relógios mecânicos. "
+  },
+  {
+    id: 2,
+    question: "Qual é a linha de referência horizontal no sistema de coordenadas geográficas?",
+    options: ["Meridiano de Greenwich", "Equador", "Trópico de Câncer", "Círculo Polar Ártico"],
+    correctAnswer: 1,
+    explanation:
+      "O Equador é a linha de referência horizontal (latitude 0°) que divide a Terra em hemisférios Norte e Sul.",
+  },
+  {
+    id: 3,
+    question: "O que significa GNSS?",
+    options: [
+      "Global Network Satellite System",
+      "General Navigation Support System",
+      "Global Navigation Satellite System",
+      "Geographic National Security System",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "GNSS significa Global Navigation Satellite System (Sistema Global de Navegação por Satélite), um termo genérico que engloba todos os sistemas de posicionamento por satélite.",
+  },
+  {
+    id: 4,
+    question: "Quantos satélites GNSS são necessários para determinar uma posição tridimensional?",
+    options: ["2 satélites", "3 satélites", "4 satélites", "5 satélites"],
+    correctAnswer: 2,
+    explanation:
+      "São necessários no mínimo 4 satélites: 3 para determinar latitude, longitude e altitude, e 1 adicional para sincronização do relógio do receptor.",
+  },
+  {
+    id: 5,
+    question: "Qual é o sistema de posicionamento por satélite desenvolvido pela Rússia?",
+    options: ["GPS", "Galileo", "GLONASS", "BeiDou"],
+    correctAnswer: 2,
+    explanation:
+      "GLONASS (Global Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela Rússia, equivalente ao GPS americano.",
+  },
+  {
+    id: 6,
+    question: "O que é latitude?",
+    options: [
+      "Distância angular leste-oeste do Meridiano de Greenwich",
+      "Distância angular norte-sul do Equador",
+      "Altitude em relação ao nível do mar",
+      "Ângulo em relação ao polo magnético",],
+    correctAnswer: 1,
+    explanation:
+      "Latitude é a distância angular medida em graus ao norte ou sul do Equador, variando de 0° (no Equador) até 90° (nos polos).",
+  },
+  {
+    id: 7,
+   question: "Por que foi mais difícil descobrir como medir a longitude do que a latitude?",
+      options: [
+        "Porque a longitude depende do tempo preciso e não havia relógios adequados",
+        "Porque não existiam mapas",
+        "Porque a Terra é redonda",
+        "Porque não havia matemáticos competentes"
+      ],
+      correctAnswer: 0,
+      explanation: "Para calcular longitude, era necessário comparar o horário local com um horário de referência. Sem relógios precisos no mar, isso era impossível até o século XVIII."
+  },
+  {
+    id: 8,
+    question: "O que é longitude?",
+    options: [
+      "Distância angular norte-sul do Equador",
+      "Distância angular leste-oeste do Meridiano de Greenwich",
+      "Comprimento de um meridiano",
+      "Distância entre dois paralelos",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Longitude é a distância angular medida em graus a leste ou oeste do Meridiano de Greenwich (0°), variando de 0° a 180° para leste e oeste.",
+  },
+  {
+    id: 9,
+    question: "Qual instrumento mede a altura em relação ao nível do mar ?",
+    options: ["Teodolito", "Cronômetro", "Barômetro", "Altímetro"],
+    correctAnswer: 3,
+    explanation:
+      "GO Altímetro mede altitude em relação ao nível do mar.",
+  },
+  {
+    id: 10,
+    question: "Qual invenção do século XVIII revolucionou a navegação ao permitir calcular a longitude?",
+      options: [
+        "O telescópio",
+        "O cronômetro marítimo preciso",
+        "O sextante",
+        "O barômetro"
+      ],
+      correctAnswer: 1,
+      explanation: "John Harrison inventou o cronômetro marítimo (relógio de precisão) que mantinha a hora exata mesmo no mar, permitindo calcular a longitude com precisão."
+  },
+  {
+    id: 11,
+    question: "Quantos graus tem um círculo completo de longitude?",
+    options: ["90 graus", "180 graus", "270 graus", "360 graus"],
+    correctAnswer: 3,
+    explanation:
+      "Um círculo completo de longitude tem 360 graus: 180° para leste e 180° para oeste do Meridiano de Greenwich.",
+  },
+  {
+    id: 12,
+    question: "O que é o Meridiano de Greenwich?",
+    options: [
+      "Linha que divide os hemisférios Norte e Sul",
+      "Linha de referência para a longitude (0°)",
+      "Linha que passa pelos polos magnéticos",
+      "Linha do Equador",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "O Meridiano de Greenwich é a linha de referência (longitude 0°) que passa pelo Observatório Real de Greenwich, Londres, dividindo a Terra em hemisférios Oriental e Ocidental.",
+  },
+  {
+    id: 13,
+    question: "Qual é o sistema GNSS chinês?",
+    options: ["GPS", "BeiDou", "IRNSS", "QZSS"],
+    correctAnswer: 1,
+    explanation:
+      "BeiDou (ou BDS - BeiDou Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela China, oferecendo cobertura global.",
+  },
+  {
+    id: 14,
+    question: "O que é um marco geodésico?",
+      options: [
+        "Um tipo de pedra preciosa",
+        "Um ponto físico fixo na superfície terrestre com coordenadas conhecidas com precisão",
+        "Uma estrela usada para navegação",
+        "Um aplicativo de celular"
+      ],
+      correctAnswer: 1,
+      explanation: "Marcos geodésicos são pontos materializados no terreno (geralmente com uma placa ou estrutura) cujas coordenadas foram medidas com alta precisão, servindo de referência para levantamentos."
+  },
+  {
+    id: 15,
+    question: "Qual é a diferença entre GPS e GNSS?",
+      options: [
+        "Não há diferença, são sinônimos",
+        "GPS é o sistema americano, GNSS é o termo geral para todos os sistemas de satélite",
+        "GPS é mais antigo que GNSS",
+        "GNSS só funciona na Europa"
+      ],
+      correctAnswer: 1,
+      explanation: "GPS (Global Positioning System) é o sistema americano específico. GNSS é o termo abrangente que inclui GPS, GLONASS, Galileo, BeiDou e outros sistemas."
+  },
+  {
+    id: 16,
+    question: "O que é WGS84?",
+    options: [
+      "Um tipo de satélite GPS",
+      "Um sistema de datum geodésico global",
+      "Uma frequência de rádio",
+      "Um protocolo de comunicação",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "WGS84 (World Geodetic System 1984) é o sistema de referência geodésico global usado pelo GPS, definindo o formato e dimensões da Terra.",
+  },
+  {
+    id: 17,
+    question: "Quantos satélites GPS estão normalmente em operação?",
+    options: ["Aproximadamente 12", "Aproximadamente 18", "Aproximadamente 24", "Aproximadamente 30"],
+    correctAnswer: 3,
+    explanation:
+      "A constelação GPS mantém tipicamente 30 ou mais satélites operacionais, embora o sistema tenha sido projetado para funcionar com um mínimo de 24.",
+  },
+  {
+    id: 18,
+    question: "Qual a principal função de um cronômetro marítimo?",
+    options: [
+      "Medir latitude",
+      "Medir velocidade do navio",
+      "Medir profundidade",
+      "Calcular longitude",],
+    correctAnswer: 3,
+    explanation:
+      "O cronômetro marítimo permite calclar a longitude com precisão.",
+  },
+  {
+    id: 19,
+    question: "Qual é a velocidade de propagação dos sinais GPS no vácuo?",
+    options: [
+      "Velocidade do som",
+      "Velocidade da luz",
+      "Metade da velocidade da luz",
+      "Duas vezes a velocidade da luz",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Os sinais GPS propagam-se à velocidade da luz (aproximadamente 300.000 km/s no vácuo), permitindo calcular distâncias com base no tempo de viagem do sinal.",
+  },
+  {
+    id: 20,
+    question: 'Qual linha imaginária divide a terra em leste e oeste?',
+    options: [
+      "Linha do Ártico",
+      "Meridiano de Greenwich",
+      "Trópico de Capricórnio",
+      "Equador",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "O Meridiano de Greenwich divide a Terra nos hemisférios Leste e Oeste..",
+  },
+]
+/* const questions: Question[] = [
   {
     id: 1,
       question: "Como os primeiros navegadores se localizavam antes da invenção de instrumentos modernos?",
@@ -241,7 +462,7 @@ const questions: Question[] = [
     explanation:
       "DOP (Dilution of Precision) é uma métrica que indica como a geometria dos satélites visíveis afeta a precisão do posicionamento. Quanto menor o DOP, melhor a precisão.",
   },
-]
+] */
 
 interface QuizProps {
   onBack: () => void

@@ -23,223 +23,243 @@ interface AnsweredQuestion {
 const questions: Question[] = [
   {
     id: 1,
-      question: "Como os primeiros navegadores se localizavam antes da invenção de instrumentos modernos?",
-      options: [
-        "Usando GPS",
-        "Observando estrelas, sol e pontos de referência naturais",
-        "Usando mapas digitais",
-        "Com bússolas eletrônicas"
-      ],
-      correctAnswer: 1,
-      explanation: "Antigos navegadores usavam a posição do sol durante o dia, as estrelas à noite e pontos de referência como montanhas e ilhas para se orientar."
+    question: "O que significa CAD?",
+    options: [
+      "Computer Aided Drafting",
+      "Computer Assisted Design",
+      "Computer Aided Design (Desenho Assistido por Computador)",
+      "Computer Automated Drawing"
+    ],
+    correctAnswer: 2,
+    explanation: "CAD significa Computer Aided Design (Desenho Assistido por Computador), tecnologia que permite criar, modificar, analisar e documentar designs e desenhos técnicos de forma digital."
   },
   {
     id: 2,
-    question: "Qual é a linha de referência horizontal no sistema de coordenadas geográficas?",
-    options: ["Meridiano de Greenwich", "Equador", "Trópico de Câncer", "Círculo Polar Ártico"],
+    question: "Qual é o software CAD mais utilizado mundialmente?",
+    options: [
+      "SketchUp",
+      "AutoCAD",
+      "QGIS",
+      "Revit"
+    ],
     correctAnswer: 1,
-    explanation:
-      "O Equador é a linha de referência horizontal (latitude 0°) que divide a Terra em hemisférios Norte e Sul.",
+    explanation: "AutoCAD, da Autodesk, é o software CAD mais utilizado mundialmente desde seu lançamento em 1982, sendo referência em desenho técnico 2D e modelagem 3D."
   },
   {
     id: 3,
-    question: "O que significa GNSS?",
+    question: "O que significa GIS (ou SIG em português)?",
     options: [
-      "Global Network Satellite System",
-      "General Navigation Support System",
-      "Global Navigation Satellite System",
-      "Geographic National Security System",
+      "Global Information System",
+      "Geographic Information System (Sistema de Informação Geográfica)",
+      "Geological Integrated System",
+      "General Investigation Software"
     ],
-    correctAnswer: 2,
-    explanation:
-      "GNSS significa Global Navigation Satellite System (Sistema Global de Navegação por Satélite), um termo genérico que engloba todos os sistemas de posicionamento por satélite.",
+    correctAnswer: 1,
+    explanation: "GIS (Geographic Information System) ou SIG (Sistema de Informação Geográfica) é um sistema que captura, armazena, analisa, gerencia e apresenta dados espacialmente referenciados."
   },
   {
     id: 4,
-    question: "Quantos satélites GPS são necessários para determinar uma posição tridimensional?",
-    options: ["2 satélites", "3 satélites", "4 satélites", "5 satélites"],
+    question: "Qual software GIS de código aberto é mais popular?",
+    options: [
+      "ArcGIS",
+      "MapInfo",
+      "QGIS",
+      "AutoCAD Map 3D"
+    ],
     correctAnswer: 2,
-    explanation:
-      "São necessários no mínimo 4 satélites: 3 para determinar latitude, longitude e altitude, e 1 adicional para sincronização do relógio do receptor.",
+    explanation: "QGIS (Quantum GIS) é o software GIS de código aberto (open source) mais popular, oferecendo funcionalidades completas de SIG gratuitamente e com desenvolvimento comunitário ativo."
   },
   {
     id: 5,
-    question: "Qual é o sistema de posicionamento por satélite desenvolvido pela Rússia?",
-    options: ["GPS", "Galileo", "GLONASS", "BeiDou"],
-    correctAnswer: 2,
-    explanation:
-      "GLONASS (Global Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela Rússia, equivalente ao GPS americano.",
+    question: "Qual empresa desenvolve o ArcGIS?",
+    options: [
+      "Autodesk",
+      "Esri",
+      "Bentley Systems",
+      "Trimble"
+    ],
+    correctAnswer: 1,
+    explanation: "Esri (Environmental Systems Research Institute) desenvolve o ArcGIS, uma das plataformas GIS comerciais mais completas e utilizadas no mundo para análise espacial."
   },
   {
     id: 6,
-    question: "O que é latitude?",
+    question: "O que significa BIM?",
     options: [
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Distância angular norte-sul do Equador",
-      "Altitude em relação ao nível do mar",
-      "Ângulo em relação ao polo magnético",
+      "Building Information Modeling (Modelagem da Informação da Construção)",
+      "Basic Infrastructure Management",
+      "Building Integrated Management",
+      "Built Information Method"
     ],
-    correctAnswer: 1,
-    explanation:
-      "Latitude é a distância angular medida em graus ao norte ou sul do Equador, variando de 0° (no Equador) até 90° (nos polos).",
+    correctAnswer: 0,
+    explanation: "BIM significa Building Information Modeling, metodologia que integra informações 3D da edificação com dados de projeto, construção, custos, cronograma e manutenção em um modelo digital único."
   },
   {
     id: 7,
-   question: "Por que foi mais difícil descobrir como medir a longitude do que a latitude?",
-      options: [
-        "Porque a longitude depende do tempo preciso e não havia relógios adequados",
-        "Porque não existiam mapas",
-        "Porque a Terra é redonda",
-        "Porque não havia matemáticos competentes"
-      ],
-      correctAnswer: 0,
-      explanation: "Para calcular longitude, era necessário comparar o horário local com um horário de referência. Sem relógios precisos no mar, isso era impossível até o século XVIII."
+    question: "Qual software é líder em BIM para arquitetura?",
+    options: [
+      "AutoCAD",
+      "SketchUp",
+      "Revit",
+      "ArchiCAD"
+    ],
+    correctAnswer: 2,
+    explanation: "Revit, da Autodesk, é líder de mercado em BIM para arquitetura, oferecendo modelagem paramétrica integrada para arquitetura, estrutura e instalações (MEP)."
   },
   {
     id: 8,
-    question: "O que é longitude?",
+    question: "Qual software é específico para processamento de imagens de sensoriamento remoto?",
     options: [
-      "Distância angular norte-sul do Equador",
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Comprimento de um meridiano",
-      "Distância entre dois paralelos",
+      "AutoCAD",
+      "ArcGIS Pro",
+      "ENVI (ou ERDAS Imagine)",
+      "Revit"
     ],
-    correctAnswer: 1,
-    explanation:
-      "Longitude é a distância angular medida em graus a leste ou oeste do Meridiano de Greenwich (0°), variando de 0° a 180° para leste e oeste.",
+    correctAnswer: 2,
+    explanation: "ENVI e ERDAS Imagine são softwares especializados em processamento de imagens de sensoriamento remoto, oferecendo ferramentas avançadas para classificação, correção e análise de imagens orbitais."
   },
   {
     id: 9,
-    question: "Qual sistema GNSS é desenvolvido pela União Europeia?",
-    options: ["GPS", "GLONASS", "Galileo", "QZSS"],
-    correctAnswer: 2,
-    explanation:
-      "Galileo é o sistema de navegação por satélite desenvolvido pela União Europeia, projetado para ser independente e interoperável com outros sistemas GNSS.",
+    question: "O que é um shapefile?",
+    options: [
+      "Um formato de arquivo 3D para BIM",
+      "Um formato vetorial de dados geoespaciais da Esri",
+      "Um tipo de imagem de satélite",
+      "Um formato de desenho CAD"
+    ],
+    correctAnswer: 1,
+    explanation: "Shapefile (.shp) é um formato vetorial de dados geoespaciais desenvolvido pela Esri, amplamente utilizado em GIS para armazenar geometrias (pontos, linhas, polígonos) e atributos."
   },
   {
     id: 10,
-    question: "Qual invenção do século XVIII revolucionou a navegação ao permitir calcular a longitude?",
-      options: [
-        "O telescópio",
-        "O cronômetro marítimo preciso",
-        "O GPS",
-        "A câmera fotográfica"
-      ],
-      correctAnswer: 1,
-      explanation: "John Harrison inventou o cronômetro marítimo (relógio de precisão) que mantinha a hora exata mesmo no mar, permitindo calcular a longitude com precisão."
+    question: "Qual formato de arquivo é nativo do AutoCAD?",
+    options: [
+      ".shp",
+      ".dwg",
+      ".rvt",
+      ".tif"
+    ],
+    correctAnswer: 1,
+    explanation: "DWG (Drawing) é o formato nativo do AutoCAD para armazenar desenhos 2D e modelos 3D, sendo um padrão da indústria para troca de dados CAD."
   },
   {
     id: 11,
-    question: "Quantos graus tem um círculo completo de longitude?",
-    options: ["90 graus", "180 graus", "270 graus", "360 graus"],
-    correctAnswer: 3,
-    explanation:
-      "Um círculo completo de longitude tem 360 graus: 180° para leste e 180° para oeste do Meridiano de Greenwich.",
+    question: "Qual formato de arquivo é nativo do Revit?",
+    options: [
+      ".dwg",
+      ".rvt",
+      ".ifc",
+      ".skp"
+    ],
+    correctAnswer: 1,
+    explanation: "RVT é o formato de arquivo nativo do Revit, armazenando todos os dados BIM do projeto incluindo geometria 3D, informações de componentes, fases e vistas."
   },
   {
     id: 12,
-    question: "O que é o Meridiano de Greenwich?",
+    question: "O que é o formato IFC em BIM?",
     options: [
-      "Linha que divide os hemisférios Norte e Sul",
-      "Linha de referência para a longitude (0°)",
-      "Linha que passa pelos polos magnéticos",
-      "Linha do Equador",
+      "Um formato proprietário da Autodesk",
+      "Um padrão aberto de interoperabilidade entre softwares BIM",
+      "Um tipo de imagem raster",
+      "Um formato específico para CAD 2D"
     ],
     correctAnswer: 1,
-    explanation:
-      "O Meridiano de Greenwich é a linha de referência (longitude 0°) que passa pelo Observatório Real de Greenwich, Londres, dividindo a Terra em hemisférios Oriental e Ocidental.",
+    explanation: "IFC (Industry Foundation Classes) é um padrão aberto e neutro para troca de dados BIM entre diferentes softwares, garantindo interoperabilidade no processo BIM."
   },
   {
     id: 13,
-    question: "Qual é o sistema GNSS chinês?",
-    options: ["GPS", "BeiDou", "IRNSS", "QZSS"],
-    correctAnswer: 1,
-    explanation:
-      "BeiDou (ou BDS - BeiDou Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela China, oferecendo cobertura global.",
+    question: "Qual software é popular para modelagem 3D arquitetônica simplificada?",
+    options: [
+      "ENVI",
+      "QGIS",
+      "SketchUp",
+      "ERDAS"
+    ],
+    correctAnswer: 2,
+    explanation: "SketchUp é popular por sua interface intuitiva para modelagem 3D arquitetônica, sendo usado para estudos preliminares, visualizações e projetos conceituais."
   },
   {
     id: 14,
-    question: "O que é um marco geodésico?",
-      options: [
-        "Um tipo de pedra preciosa",
-        "Um ponto físico fixo na superfície terrestre com coordenadas conhecidas com precisão",
-        "Uma estrela usada para navegação",
-        "Um aplicativo de celular"
-      ],
-      correctAnswer: 1,
-      explanation: "Marcos geodésicos são pontos materializados no terreno (geralmente com uma placa ou estrutura) cujas coordenadas foram medidas com alta precisão, servindo de referência para levantamentos."
+    question: "O que é o Google Earth Engine?",
+    options: [
+      "Um software CAD da Google",
+      "Uma plataforma em nuvem para processamento de dados geoespaciais e imagens de satélite",
+      "Um aplicativo de navegação",
+      "Um formato de arquivo raster"
+    ],
+    correctAnswer: 1,
+    explanation: "Google Earth Engine é uma plataforma em nuvem que permite processamento e análise de grandes volumes de dados geoespaciais e imagens de satélite usando programação (JavaScript ou Python)."
   },
   {
     id: 15,
-    question: "Qual é a diferença entre GPS e GNSS?",
-      options: [
-        "Não há diferença, são sinônimos",
-        "GPS é o sistema americano, GNSS é o termo geral para todos os sistemas de satélite",
-        "GPS é mais antigo que GNSS",
-        "GNSS só funciona na Europa"
-      ],
-      correctAnswer: 1,
-      explanation: "GPS (Global Positioning System) é o sistema americano específico. GNSS é o termo abrangente que inclui GPS, GLONASS, Galileo, BeiDou e outros sistemas."
+    question: "Qual linguagem de programação é mais usada em automação e análise em GIS?",
+    options: [
+      "Java",
+      "C++",
+      "Python",
+      "PHP"
+    ],
+    correctAnswer: 2,
+    explanation: "Python é a linguagem mais utilizada em GIS, com bibliotecas como ArcPy (ArcGIS), PyQGIS (QGIS), GDAL, Geopandas e Rasterio para automação e análise espacial."
   },
   {
     id: 16,
-    question: "O que é WGS84?",
+    question: "O que é o formato GeoTIFF?",
     options: [
-      "Um tipo de satélite GPS",
-      "Um sistema de datum geodésico global",
-      "Uma frequência de rádio",
-      "Um protocolo de comunicação",
+      "Um formato vetorial para CAD",
+      "Um formato raster que inclui metadados de georreferenciamento",
+      "Um formato exclusivo do AutoCAD",
+      "Um tipo de arquivo BIM"
     ],
     correctAnswer: 1,
-    explanation:
-      "WGS84 (World Geodetic System 1984) é o sistema de referência geodésico global usado pelo GPS, definindo o formato e dimensões da Terra.",
+    explanation: "GeoTIFF é um formato de imagem raster (baseado em TIFF) que inclui metadados de georreferenciamento (coordenadas, projeção, datum), amplamente usado em GIS e sensoriamento remoto."
   },
   {
     id: 17,
-    question: "Quantos satélites GPS estão normalmente em operação?",
-    options: ["Aproximadamente 12", "Aproximadamente 18", "Aproximadamente 24", "Aproximadamente 30"],
-    correctAnswer: 3,
-    explanation:
-      "A constelação GPS mantém tipicamente 30 ou mais satélites operacionais, embora o sistema tenha sido projetado para funcionar com um mínimo de 24.",
+    question: "Qual software da Bentley Systems é usado para projetos de infraestrutura?",
+    options: [
+      "Revit",
+      "MicroStation",
+      "SketchUp",
+      "QGIS"
+    ],
+    correctAnswer: 1,
+    explanation: "MicroStation, da Bentley Systems, é usado para projetos de infraestrutura (rodovias, ferrovias, pontes), oferecendo ferramentas CAD e BIM para engenharia civil."
   },
   {
     id: 18,
-    question: "O que é WAAS?",
+    question: "O que é o ArcGIS Online?",
     options: [
-      "Wide Area Augmentation System",
-      "World Aviation Accuracy System",
-      "Wireless Aerial Access System",
-      "Western Atlantic Aviation Service",
+      "Uma versão offline do ArcGIS",
+      "Uma plataforma em nuvem para criar e compartilhar mapas e aplicações GIS",
+      "Um software para processamento de imagens",
+      "Um formato de arquivo vetorial"
     ],
-    correctAnswer: 0,
-    explanation:
-      "WAAS (Wide Area Augmentation System) é um sistema de correção diferencial do GPS desenvolvido pela FAA para melhorar a precisão na América do Norte.",
+    correctAnswer: 1,
+    explanation: "ArcGIS Online é uma plataforma SaaS (Software as a Service) baseada em nuvem da Esri para criar, compartilhar e publicar mapas web, aplicações e análises GIS."
   },
   {
     id: 19,
-    question: "Qual é a velocidade de propagação dos sinais GPS no vácuo?",
+    question: "Qual software é usado para processamento fotogramétrico e criação de ortomosaicos?",
     options: [
-      "Velocidade do som",
-      "Velocidade da luz",
-      "Metade da velocidade da luz",
-      "Duas vezes a velocidade da luz",
+      "AutoCAD",
+      "Revit",
+      "Pix4D ou Agisoft Metashape",
+      "QGIS"
     ],
-    correctAnswer: 1,
-    explanation:
-      "Os sinais GPS propagam-se à velocidade da luz (aproximadamente 300.000 km/s no vácuo), permitindo calcular distâncias com base no tempo de viagem do sinal.",
+    correctAnswer: 2,
+    explanation: "Pix4D e Agisoft Metashape são softwares especializados em fotogrametria, processando imagens de drones ou aéreas para gerar ortomosaicos, nuvens de pontos e modelos 3D."
   },
   {
     id: 20,
-    question: 'O que significa "dilution of precision" (DOP)?',
+    question: "O que é um geodatabase?",
     options: [
-      "Perda de sinal do satélite",
-      "Métrica da geometria dos satélites que afeta a precisão",
-      "Interferência atmosférica",
-      "Erro de calibração do receptor",
+      "Um tipo de arquivo CAD",
+      "Um banco de dados espacial para armazenar e gerenciar dados GIS",
+      "Um software de modelagem 3D",
+      "Um formato de imagem de satélite"
     ],
     correctAnswer: 1,
-    explanation:
-      "DOP (Dilution of Precision) é uma métrica que indica como a geometria dos satélites visíveis afeta a precisão do posicionamento. Quanto menor o DOP, melhor a precisão.",
+    explanation: "Geodatabase é um banco de dados espacial (da Esri) que armazena, gerencia e organiza dados GIS (vetoriais, raster, atributos) com suporte a topologia, relacionamentos e regras de validação."
   },
 ]
 
@@ -371,9 +391,9 @@ export default function Software({ onBack }: QuizProps) {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
             <Navigation className="w-8 h-8 text-primary" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 1: Localização na Superfície Terrestre</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 4: Softwares para Geotecnologias</h1>
           <p className="text-muted-foreground text-lg">
-            Distâncias, Direções e Tempo - Sistemas de Coordenadas - GNSS
+            CAD - GIS - Sensoriamento Remoto - BIM - Formatos de Arquivo
           </p>
         </div>
 

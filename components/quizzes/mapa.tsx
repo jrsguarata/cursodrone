@@ -23,211 +23,243 @@ interface AnsweredQuestion {
 const questions: Question[] = [
   {
     id: 1,
-    question: "Como os primeiros navegadores se localizavam antes da invenção de instrumentos modernos?",
-      options: [
-        "Usando GPS",
-        "Observando estrelas, sol e pontos de referência naturais",
-        "Usando mapas digitais",
-        "Com bússolas eletrônicas"
-      ],
-      correctAnswer: 1,
-      explanation: "Antigos navegadores usavam a posição do sol durante o dia, as estrelas à noite e pontos de referência como montanhas e ilhas para se orientar."
+    question: "O que caracteriza um mapa temático?",
+    options: [
+      "Representa fenômenos qualitativos ou quantitativos sobre um tema específico",
+      "Mostra apenas relevo e hidrografia",
+      "É usado exclusivamente para navegação",
+      "Apresenta somente divisões políticas"
+    ],
+    correctAnswer: 0,
+    explanation: "Mapas temáticos representam a distribuição espacial de fenômenos específicos (população, clima, vegetação, etc.) sobre uma base geográfica, podendo ser qualitativos ou quantitativos."
   },
   {
     id: 2,
-    question: "O que é latitude?",
-      options: [
-        "A distância até o Polo Norte",
-        "A medida em graus da posição norte-sul em relação ao Equador",
-        "A altura de um lugar em relação ao mar",
-        "A distância entre dois países"
-      ],
-      correctAnswer: 1,
-      explanation: "Latitude é a coordenada que indica a posição norte ou sul em relação à linha do Equador (0°). Varia de 0° a 90° Norte ou Sul."
+    question: "Qual é a principal característica de um mapa topográfico?",
+    options: [
+      "Representa temas socioeconômicos",
+      "Mostra o relevo através de curvas de nível e elementos naturais/artificiais da superfície",
+      "É usado apenas para navegação marítima",
+      "Apresenta somente dados climáticos"
+    ],
+    correctAnswer: 1,
+    explanation: "Mapas topográficos representam o relevo através de curvas de nível, além de mostrar hidrografia, vegetação, construções e outros elementos da superfície terrestre em grande escala."
   },
   {
     id: 3,
-    question: "O que significa GNSS?",
+    question: "O que são mapas sistemáticos ou de referência?",
     options: [
-      "Global Network Satellite System",
-      "General Navigation Support System",
-      "Global Navigation Satellite System",
-      "Geographic National Security System",
+      "Mapas que mostram apenas um tema específico",
+      "Mapas de base que representam elementos gerais da superfície (relevo, hidrografia, limites)",
+      "Mapas usados exclusivamente em navegação aérea",
+      "Mapas que mostram apenas dados estatísticos"
     ],
-    correctAnswer: 2,
-    explanation:
-      "GNSS significa Global Navigation Satellite System (Sistema Global de Navegação por Satélite), um termo genérico que engloba todos os sistemas de posicionamento por satélite.",
+    correctAnswer: 1,
+    explanation: "Mapas sistemáticos (ou de referência) são mapas de base que representam elementos gerais como relevo, hidrografia, divisões político-administrativas, servindo de base para mapas temáticos."
   },
   {
     id: 4,
-    question: "Quantos satélites GPS são necessários para determinar uma posição tridimensional?",
-    options: ["2 satélites", "3 satélites", "4 satélites", "5 satélites"],
-    correctAnswer: 2,
-    explanation:
-      "São necessários no mínimo 4 satélites: 3 para determinar latitude, longitude e altitude, e 1 adicional para sincronização do relógio do receptor.",
+    question: "O que é uma projeção cartográfica?",
+    options: [
+      "O processo de ampliar um mapa",
+      "Um sistema de transformação da superfície esférica da Terra em uma superfície plana",
+      "Uma técnica de colorir mapas",
+      "Um método de medição de distâncias"
+    ],
+    correctAnswer: 1,
+    explanation: "Projeção cartográfica é o sistema matemático de transformação das coordenadas geográficas (latitude e longitude) da superfície curva da Terra em coordenadas planas de um mapa."
   },
   {
     id: 5,
-    question: "Qual é o sistema de posicionamento por satélite desenvolvido pela Rússia?",
-    options: ["GPS", "Galileo", "GLONASS", "BeiDou"],
-    correctAnswer: 2,
-    explanation:
-      "GLONASS (Global Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela Rússia, equivalente ao GPS americano.",
+    question: "Qual é a principal desvantagem das projeções cartográficas?",
+    options: [
+      "São muito caras de produzir",
+      "Impossível representar a superfície esférica no plano sem deformações",
+      "Não podem ser digitalizadas",
+      "Só funcionam para pequenas áreas"
+    ],
+    correctAnswer: 1,
+    explanation: "É matematicamente impossível representar uma superfície curva (esfera) em um plano sem deformações. Toda projeção distorce áreas, ângulos, distâncias ou formas em algum grau."
   },
   {
     id: 6,
-    question: "O que é latitude?",
+    question: "O que caracteriza uma projeção conforme?",
     options: [
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Distância angular norte-sul do Equador",
-      "Altitude em relação ao nível do mar",
-      "Ângulo em relação ao polo magnético",
+      "Preserva as áreas corretamente",
+      "Preserva os ângulos e as formas locais",
+      "Preserva todas as distâncias",
+      "Não apresenta nenhuma deformação"
     ],
     correctAnswer: 1,
-    explanation:
-      "Latitude é a distância angular medida em graus ao norte ou sul do Equador, variando de 0° (no Equador) até 90° (nos polos).",
+    explanation: "Projeções conformes preservam os ângulos e as formas locais, mantendo a conformidade angular. Porém, distorcem as áreas, especialmente em latitudes altas."
   },
   {
     id: 7,
-    question: "Qual é a precisão típica de um GPS civil sem correção diferencial?",
-    options: ["1-5 metros", "5-15 metros", "15-30 metros", "30-100 metros"],
-    correctAnswer: 1,
-    explanation:
-      "GPS civil moderno tem precisão típica de 5-15 metros em condições normais, podendo melhorar para 1-5 metros com tecnologias mais recentes.",
+    question: "Qual é um exemplo clássico de projeção conforme?",
+    options: [
+      "Projeção de Mollweide",
+      "Projeção de Peters",
+      "Projeção de Mercator",
+      "Projeção de Albers"
+    ],
+    correctAnswer: 2,
+    explanation: "A Projeção de Mercator é a mais conhecida projeção conforme, preservando ângulos e formas, muito usada em navegação. Porém, exagera áreas nas altas latitudes."
   },
   {
     id: 8,
-    question: "O que é longitude?",
+    question: "O que caracteriza uma projeção equivalente?",
     options: [
-      "Distância angular norte-sul do Equador",
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Comprimento de um meridiano",
-      "Distância entre dois paralelos",
+      "Preserva os ângulos",
+      "Preserva as áreas em proporção verdadeira",
+      "Preserva todas as distâncias",
+      "Não tem deformações"
     ],
     correctAnswer: 1,
-    explanation:
-      "Longitude é a distância angular medida em graus a leste ou oeste do Meridiano de Greenwich (0°), variando de 0° a 180° para leste e oeste.",
+    explanation: "Projeções equivalentes (ou equiáreas) preservam as áreas em proporção verdadeira, úteis para mapas temáticos comparativos. Porém, distorcem ângulos e formas."
   },
   {
     id: 9,
-    question: "Qual sistema GNSS é desenvolvido pela União Europeia?",
-    options: ["GPS", "GLONASS", "Galileo", "QZSS"],
+    question: "Qual projeção é um exemplo de projeção equivalente?",
+    options: [
+      "Mercator",
+      "UTM",
+      "Peters (ou Gall-Peters)",
+      "Estereográfica Polar"
+    ],
     correctAnswer: 2,
-    explanation:
-      "Galileo é o sistema de navegação por satélite desenvolvido pela União Europeia, projetado para ser independente e interoperável com outros sistemas GNSS.",
+    explanation: "A Projeção de Peters (Gall-Peters) é uma projeção equivalente que preserva as áreas, mostrando os continentes em suas proporções corretas, mas com distorção de formas."
   },
   {
     id: 10,
-    question: 'O que significa "DGPS"?',
-    options: ["Digital GPS", "Differential GPS", "Dynamic GPS", "Direct GPS"],
-    correctAnswer: 1,
-    explanation:
-      "DGPS (Differential GPS) é uma técnica que usa estações de referência em locais conhecidos para corrigir erros do GPS, melhorando significativamente a precisão.",
+    question: "O que é a projeção UTM (Universal Transversa de Mercator)?",
+    options: [
+      "Uma projeção cilíndrica conforme dividida em fusos de 6°",
+      "Uma projeção cônica equivalente",
+      "Uma projeção azimutal usada nos polos",
+      "Uma projeção sem nenhuma deformação"
+    ],
+    correctAnswer: 0,
+    explanation: "A UTM é uma projeção cilíndrica conforme, dividida em 60 fusos de 6° de longitude cada, muito usada em mapeamento sistemático e topográfico, minimizando distorções localmente."
   },
   {
     id: 11,
-    question: "Quantos graus tem um círculo completo de longitude?",
-    options: ["90 graus", "180 graus", "270 graus", "360 graus"],
-    correctAnswer: 3,
-    explanation:
-      "Um círculo completo de longitude tem 360 graus: 180° para leste e 180° para oeste do Meridiano de Greenwich.",
+    question: "Quantos fusos UTM cobrem todo o globo terrestre?",
+    options: [
+      "24 fusos",
+      "30 fusos",
+      "60 fusos",
+      "180 fusos"
+    ],
+    correctAnswer: 2,
+    explanation: "A projeção UTM divide a Terra em 60 fusos de 6° de longitude cada (360° ÷ 6° = 60), numerados de 1 a 60, do antemeridiano de Greenwich para leste."
   },
   {
     id: 12,
-    question: "O que é o Meridiano de Greenwich?",
+    question: "Qual é a vantagem das projeções cilíndricas?",
     options: [
-      "Linha que divide os hemisférios Norte e Sul",
-      "Linha de referência para a longitude (0°)",
-      "Linha que passa pelos polos magnéticos",
-      "Linha do Equador",
+      "Não apresentam deformações",
+      "São simples de construir e boas para áreas equatoriais",
+      "Preservam perfeitamente todas as áreas",
+      "São usadas apenas para os polos"
     ],
     correctAnswer: 1,
-    explanation:
-      "O Meridiano de Greenwich é a linha de referência (longitude 0°) que passa pelo Observatório Real de Greenwich, Londres, dividindo a Terra em hemisférios Oriental e Ocidental.",
+    explanation: "Projeções cilíndricas são geometricamente simples e apresentam menores deformações próximo ao equador, sendo adequadas para mapas de regiões tropicais e navegação."
   },
   {
     id: 13,
-    question: "Qual é o sistema GNSS chinês?",
-    options: ["GPS", "BeiDou", "IRNSS", "QZSS"],
-    correctAnswer: 1,
-    explanation:
-      "BeiDou (ou BDS - BeiDou Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela China, oferecendo cobertura global.",
+    question: "Para que tipo de área as projeções cônicas são mais adequadas?",
+    options: [
+      "Regiões polares",
+      "Regiões equatoriais",
+      "Latitudes médias com orientação leste-oeste",
+      "Áreas oceânicas"
+    ],
+    correctAnswer: 2,
+    explanation: "Projeções cônicas são adequadas para latitudes médias com extensão predominante leste-oeste, pois o cone tangencia ou secciona a Terra nessas latitudes, minimizando deformações."
   },
   {
     id: 14,
-    question: "O que causa o erro de multicaminho (multipath) no GPS?",
-    options: ["Muitos satélites visíveis", "Reflexão de sinais em superfícies", "Interferência de rádio", "Clima ruim"],
-    correctAnswer: 1,
-    explanation:
-      "Erro de multicaminho ocorre quando o sinal do satélite reflete em edifícios, montanhas ou outras superfícies antes de chegar ao receptor, criando sinais duplicados.",
+    question: "Qual tipo de projeção é mais adequado para mapas polares?",
+    options: [
+      "Cilíndrica",
+      "Cônica",
+      "Azimutal (ou plana)",
+      "Mercator"
+    ],
+    correctAnswer: 2,
+    explanation: "Projeções azimutais (ou planas) são ideais para regiões polares, pois o plano de projeção tangencia a Terra no polo, minimizando deformações nessas áreas."
   },
   {
     id: 15,
-    question: "Qual é a altitude aproximada da órbita dos satélites GPS?",
-    options: ["2.000 km", "10.000 km", "20.000 km", "36.000 km"],
-    correctAnswer: 2,
-    explanation:
-      "Os satélites GPS orbitam a aproximadamente 20.200 km de altitude, completando duas órbitas ao redor da Terra por dia.",
+    question: "O que é escala cartográfica?",
+    options: [
+      "A cor usada no mapa",
+      "A relação entre distâncias no mapa e na realidade",
+      "O tipo de projeção utilizada",
+      "O tamanho do papel do mapa"
+    ],
+    correctAnswer: 1,
+    explanation: "Escala é a relação matemática entre as distâncias no mapa e as distâncias correspondentes na superfície real. Ex: 1:50.000 significa que 1 cm no mapa = 50.000 cm (500 m) no terreno."
   },
   {
     id: 16,
-    question: "O que é WGS84?",
+    question: "O que significa uma escala 1:25.000?",
     options: [
-      "Um tipo de satélite GPS",
-      "Um sistema de datum geodésico global",
-      "Uma frequência de rádio",
-      "Um protocolo de comunicação",
+      "1 cm no mapa representa 25 km na realidade",
+      "1 cm no mapa representa 250 m na realidade",
+      "1 cm no mapa representa 25.000 cm (250 m) na realidade",
+      "O mapa tem 25.000 cm de comprimento"
     ],
-    correctAnswer: 1,
-    explanation:
-      "WGS84 (World Geodetic System 1984) é o sistema de referência geodésico global usado pelo GPS, definindo o formato e dimensões da Terra.",
+    correctAnswer: 2,
+    explanation: "Escala 1:25.000 significa que cada 1 cm no mapa corresponde a 25.000 cm no terreno, ou seja, 250 metros. É uma escala grande, com muito detalhe."
   },
   {
     id: 17,
-    question: "Quantos satélites GPS estão normalmente em operação?",
-    options: ["Aproximadamente 12", "Aproximadamente 18", "Aproximadamente 24", "Aproximadamente 30"],
+    question: "Qual escala apresenta maior detalhamento?",
+    options: [
+      "1:1.000.000",
+      "1:250.000",
+      "1:50.000",
+      "1:10.000"
+    ],
     correctAnswer: 3,
-    explanation:
-      "A constelação GPS mantém tipicamente 30 ou mais satélites operacionais, embora o sistema tenha sido projetado para funcionar com um mínimo de 24.",
+    explanation: "Quanto menor o denominador da escala, maior é a escala e maior o nível de detalhe. 1:10.000 mostra mais detalhes que 1:1.000.000, pois representa uma área menor."
   },
   {
     id: 18,
-    question: "O que é WAAS?",
+    question: "O que são curvas de nível em um mapa topográfico?",
     options: [
-      "Wide Area Augmentation System",
-      "World Aviation Accuracy System",
-      "Wireless Aerial Access System",
-      "Western Atlantic Aviation Service",
+      "Linhas que ligam pontos de mesma altitude",
+      "Limites entre países",
+      "Rotas de navegação",
+      "Linhas de coordenadas"
     ],
     correctAnswer: 0,
-    explanation:
-      "WAAS (Wide Area Augmentation System) é um sistema de correção diferencial do GPS desenvolvido pela FAA para melhorar a precisão na América do Norte.",
+    explanation: "Curvas de nível (ou isoípsas) são linhas que conectam pontos de mesma altitude, permitindo representar o relevo tridimensional em um mapa plano. Quanto mais próximas, mais íngreme o terreno."
   },
   {
     id: 19,
-    question: "Qual é a velocidade de propagação dos sinais GPS no vácuo?",
+    question: "Qual órgão é responsável pelo mapeamento sistemático oficial do Brasil?",
     options: [
-      "Velocidade do som",
-      "Velocidade da luz",
-      "Metade da velocidade da luz",
-      "Duas vezes a velocidade da luz",
+      "INPE",
+      "IBGE",
+      "INMET",
+      "ANA"
     ],
     correctAnswer: 1,
-    explanation:
-      "Os sinais GPS propagam-se à velocidade da luz (aproximadamente 300.000 km/s no vácuo), permitindo calcular distâncias com base no tempo de viagem do sinal.",
+    explanation: "O IBGE (Instituto Brasileiro de Geografia e Estatística) é responsável pelo mapeamento sistemático oficial do Brasil, produzindo as cartas topográficas nas diversas escalas."
   },
   {
     id: 20,
-    question: 'O que significa "dilution of precision" (DOP)?',
+    question: "O que é um datum geodésico?",
     options: [
-      "Perda de sinal do satélite",
-      "Métrica da geometria dos satélites que afeta a precisão",
-      "Interferência atmosférica",
-      "Erro de calibração do receptor",
+      "Um tipo de mapa temático",
+      "Um sistema de referência que define a forma e posição da Terra para o mapeamento",
+      "Uma escala cartográfica",
+      "Um instrumento de medição topográfica"
     ],
     correctAnswer: 1,
-    explanation:
-      "DOP (Dilution of Precision) é uma métrica que indica como a geometria dos satélites visíveis afeta a precisão do posicionamento. Quanto menor o DOP, melhor a precisão.",
+    explanation: "Datum geodésico é um sistema de referência que define o modelo matemático da Terra (elipsoide) e sua posição, essencial para o mapeamento. Exemplos: SAD69, SIRGAS2000, WGS84."
   },
 ]
 

@@ -23,223 +23,243 @@ interface AnsweredQuestion {
 const questions: Question[] = [
   {
     id: 1,
-      question: "Como os primeiros navegadores se localizavam antes da invenção de instrumentos modernos?",
-      options: [
-        "Usando GPS",
-        "Observando estrelas, sol e pontos de referência naturais",
-        "Usando mapas digitais",
-        "Com bússolas eletrônicas"
-      ],
-      correctAnswer: 1,
-      explanation: "Antigos navegadores usavam a posição do sol durante o dia, as estrelas à noite e pontos de referência como montanhas e ilhas para se orientar."
+    question: "Qual é a principal vantagem do uso de drones na inspeção de linhas de transmissão de energia?",
+    options: [
+      "Reduz custos e riscos, permitindo inspeções sem desligar a linha e sem expor pessoal a alturas",
+      "Substitui completamente a manutenção humana",
+      "Elimina a necessidade de qualquer planejamento",
+      "Funciona apenas em dias ensolarados"
+    ],
+    correctAnswer: 0,
+    explanation: "Drones reduzem significativamente custos operacionais e riscos à segurança, permitindo inspeções de linhas energizadas sem necessidade de desligamento e sem expor técnicos a trabalhos em altura perigosos."
   },
   {
     id: 2,
-    question: "Qual é a linha de referência horizontal no sistema de coordenadas geográficas?",
-    options: ["Meridiano de Greenwich", "Equador", "Trópico de Câncer", "Círculo Polar Ártico"],
+    question: "O que é uma câmera nadir em drones?",
+    options: [
+      "Câmera voltada para os lados",
+      "Câmera apontada verticalmente para baixo (perpendicular ao solo)",
+      "Câmera que filma em 360 graus",
+      "Câmera infravermelha"
+    ],
     correctAnswer: 1,
-    explanation:
-      "O Equador é a linha de referência horizontal (latitude 0°) que divide a Terra em hemisférios Norte e Sul.",
+    explanation: "Câmera nadir aponta verticalmente para baixo (90° em relação ao solo), capturando imagens ortogonais ideais para mapeamento, ortomosaicos e medições precisas de áreas."
   },
   {
     id: 3,
-    question: "O que significa GNSS?",
+    question: "O que é uma câmera oblíqua em drones?",
     options: [
-      "Global Network Satellite System",
-      "General Navigation Support System",
-      "Global Navigation Satellite System",
-      "Geographic National Security System",
+      "Câmera vertical",
+      "Câmera inclinada em relação à vertical (geralmente 30° a 60°)",
+      "Câmera que gira automaticamente",
+      "Câmera exclusiva para vídeos"
     ],
-    correctAnswer: 2,
-    explanation:
-      "GNSS significa Global Navigation Satellite System (Sistema Global de Navegação por Satélite), um termo genérico que engloba todos os sistemas de posicionamento por satélite.",
+    correctAnswer: 1,
+    explanation: "Câmera oblíqua é posicionada em ângulo inclinado (30° a 60°) em relação à vertical, capturando laterais de estruturas como torres, fachadas de edifícios e detalhes não visíveis em tomadas nadirais."
   },
   {
     id: 4,
-    question: "Quantos satélites GPS são necessários para determinar uma posição tridimensional?",
-    options: ["2 satélites", "3 satélites", "4 satélites", "5 satélites"],
-    correctAnswer: 2,
-    explanation:
-      "São necessários no mínimo 4 satélites: 3 para determinar latitude, longitude e altitude, e 1 adicional para sincronização do relógio do receptor.",
+    question: "Qual sensor é usado para detectar pontos quentes (hotspots) em equipamentos elétricos através de drones?",
+    options: [
+      "Câmera RGB convencional",
+      "Câmera térmica (infravermelha)",
+      "LiDAR",
+      "Radar"
+    ],
+    correctAnswer: 1,
+    explanation: "Câmera térmica (infravermelha) detecta radiação térmica, identificando pontos quentes causados por conexões defeituosas, sobrecarga ou componentes danificados em linhas de transmissão e subestações."
   },
   {
     id: 5,
-    question: "Qual é o sistema de posicionamento por satélite desenvolvido pela Rússia?",
-    options: ["GPS", "Galileo", "GLONASS", "BeiDou"],
-    correctAnswer: 2,
-    explanation:
-      "GLONASS (Global Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela Rússia, equivalente ao GPS americano.",
+    question: "Quais tipos de anomalias podem ser detectadas em torres de transmissão com câmeras RGB de alta resolução?",
+    options: [
+      "Apenas temperatura elevada",
+      "Corrosão, trincas, parafusos soltos, ninhos de pássaros, vegetação invasora",
+      "Somente campos magnéticos",
+      "Apenas umidade"
+    ],
+    correctAnswer: 1,
+    explanation: "Câmeras RGB de alta resolução capturam detalhes visuais que permitem identificar corrosão, trincas estruturais, parafusos frouxos ou faltantes, ninhos de aves, vegetação próxima aos cabos, entre outros."
   },
   {
     id: 6,
-    question: "O que é latitude?",
+    question: "O que é visão computacional aplicada à inspeção de linhas de transmissão?",
     options: [
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Distância angular norte-sul do Equador",
-      "Altitude em relação ao nível do mar",
-      "Ângulo em relação ao polo magnético",
+      "Apenas gravação de vídeos",
+      "Uso de algoritmos de IA para detectar automaticamente anomalias em imagens capturadas",
+      "Visualização manual de todas as imagens",
+      "Transmissão ao vivo das imagens"
     ],
     correctAnswer: 1,
-    explanation:
-      "Latitude é a distância angular medida em graus ao norte ou sul do Equador, variando de 0° (no Equador) até 90° (nos polos).",
+    explanation: "Visão computacional usa algoritmos de inteligência artificial (deep learning, redes neurais) para analisar automaticamente milhares de imagens, detectando e classificando anomalias como isoladores danificados, cabos rompidos, corrosão."
   },
   {
     id: 7,
-   question: "Por que foi mais difícil descobrir como medir a longitude do que a latitude?",
-      options: [
-        "Porque a longitude depende do tempo preciso e não havia relógios adequados",
-        "Porque não existiam mapas",
-        "Porque a Terra é redonda",
-        "Porque não havia matemáticos competentes"
-      ],
-      correctAnswer: 0,
-      explanation: "Para calcular longitude, era necessário comparar o horário local com um horário de referência. Sem relógios precisos no mar, isso era impossível até o século XVIII."
+    question: "Qual é a vantagem da inspeção termográfica com drones em linhas energizadas?",
+    options: [
+      "Identifica aquecimento anormal sem necessidade de desligamento da linha",
+      "Funciona apenas com linhas desligadas",
+      "Substitui inspeção visual completamente",
+      "Não detecta problemas elétricos"
+    ],
+    correctAnswer: 0,
+    explanation: "Inspeção termográfica detecta aquecimento anormal (conexões defeituosas, sobrecarga) em equipamentos energizados sem necessidade de desligamento, permitindo manutenção preditiva e evitando falhas."
   },
   {
     id: 8,
-    question: "O que é longitude?",
+    question: "O que é efeito corona e como pode ser detectado em inspeções com drones?",
     options: [
-      "Distância angular norte-sul do Equador",
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Comprimento de um meridiano",
-      "Distância entre dois paralelos",
+      "Aquecimento normal dos cabos",
+      "Descarga elétrica parcial que pode ser detectada com câmeras UV ou acústicas",
+      "Corrosão de torres metálicas",
+      "Movimento dos cabos pelo vento"
     ],
     correctAnswer: 1,
-    explanation:
-      "Longitude é a distância angular medida em graus a leste ou oeste do Meridiano de Greenwich (0°), variando de 0° a 180° para leste e oeste.",
+    explanation: "Efeito corona é uma descarga elétrica parcial que ocorre em alta tensão, detectável por câmeras UV (ultravioleta) ou sensores acústicos em drones, indicando problemas de isolamento ou conexões."
   },
   {
     id: 9,
-    question: "Qual sistema GNSS é desenvolvido pela União Europeia?",
-    options: ["GPS", "GLONASS", "Galileo", "QZSS"],
-    correctAnswer: 2,
-    explanation:
-      "Galileo é o sistema de navegação por satélite desenvolvido pela União Europeia, projetado para ser independente e interoperável com outros sistemas GNSS.",
+    question: "Qual tipo de drone é mais adequado para inspeção detalhada de torres de transmissão?",
+    options: [
+      "Drone de asa fixa",
+      "Multirrotor (quadricóptero ou hexacóptero) com capacidade de voo estacionário",
+      "Drone submarino",
+      "Balão dirigível"
+    ],
+    correctAnswer: 1,
+    explanation: "Multirrotores (quadricópteros, hexacópteros) permitem voo estacionário (hover), aproximação controlada e manobras precisas necessárias para capturar detalhes de torres, isoladores e conexões."
   },
   {
     id: 10,
-    question: "Qual invenção do século XVIII revolucionou a navegação ao permitir calcular a longitude?",
-      options: [
-        "O telescópio",
-        "O cronômetro marítimo preciso",
-        "O GPS",
-        "A câmera fotográfica"
-      ],
-      correctAnswer: 1,
-      explanation: "John Harrison inventou o cronômetro marítimo (relógio de precisão) que mantinha a hora exata mesmo no mar, permitindo calcular a longitude com precisão."
+    question: "O que é ortomosaico gerado por drones e sua utilidade na inspeção de faixas de servidão?",
+    options: [
+      "Um vídeo em alta velocidade",
+      "Uma imagem única ortorretificada criada pela junção de múltiplas fotos aéreas",
+      "Uma foto isolada",
+      "Um mapa desenhado manualmente"
+    ],
+    correctAnswer: 1,
+    explanation: "Ortomosaico é uma imagem contínua georreferenciada criada pela união de centenas de fotos aéreas, permitindo visualizar toda a faixa de servidão, medir distâncias, detectar invasões e vegetação."
   },
   {
     id: 11,
-    question: "Quantos graus tem um círculo completo de longitude?",
-    options: ["90 graus", "180 graus", "270 graus", "360 graus"],
-    correctAnswer: 3,
-    explanation:
-      "Um círculo completo de longitude tem 360 graus: 180° para leste e 180° para oeste do Meridiano de Greenwich.",
+    question: "Qual é a importância do planejamento de voo automatizado (waypoints) em inspeções de linhas de transmissão?",
+    options: [
+      "Não é importante, voo manual é sempre melhor",
+      "Garante cobertura completa, repetibilidade e segurança, seguindo trajetória predefinida",
+      "Serve apenas para economizar bateria",
+      "É obrigatório por lei em todos os países"
+    ],
+    correctAnswer: 1,
+    explanation: "Planejamento de voo com waypoints garante cobertura sistemática de toda a linha, permite repetir inspeções para comparação temporal, mantém distância segura e otimiza uso de bateria."
   },
   {
     id: 12,
-    question: "O que é o Meridiano de Greenwich?",
+    question: "Quais informações podem ser extraídas de uma nuvem de pontos 3D gerada por fotogrametria com drone?",
     options: [
-      "Linha que divide os hemisférios Norte e Sul",
-      "Linha de referência para a longitude (0°)",
-      "Linha que passa pelos polos magnéticos",
-      "Linha do Equador",
+      "Apenas cores das estruturas",
+      "Geometria 3D precisa, dimensões, deformações estruturais, proximidade vegetação-cabos",
+      "Somente temperatura",
+      "Apenas localização GPS"
     ],
     correctAnswer: 1,
-    explanation:
-      "O Meridiano de Greenwich é a linha de referência (longitude 0°) que passa pelo Observatório Real de Greenwich, Londres, dividindo a Terra em hemisférios Oriental e Ocidental.",
+    explanation: "Nuvem de pontos 3D permite medições precisas de geometria, identificação de deformações estruturais, cálculo de distâncias entre vegetação e cabos, modelagem 3D de torres e linhas."
   },
   {
     id: 13,
-    question: "Qual é o sistema GNSS chinês?",
-    options: ["GPS", "BeiDou", "IRNSS", "QZSS"],
+    question: "O que é machine learning aplicado à detecção de anomalias em inspeções?",
+    options: [
+      "Edição manual de fotos",
+      "Treinamento de algoritmos com imagens rotuladas para reconhecer padrões de defeitos automaticamente",
+      "Impressão de relatórios",
+      "Armazenamento de dados"
+    ],
     correctAnswer: 1,
-    explanation:
-      "BeiDou (ou BDS - BeiDou Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela China, oferecendo cobertura global.",
+    explanation: "Machine learning treina modelos com milhares de imagens rotuladas (normais e com defeitos), permitindo que algoritmos aprendam a identificar automaticamente isoladores quebrados, corrosão, cabos frouxos, etc."
   },
   {
     id: 14,
-    question: "O que é um marco geodésico?",
-      options: [
-        "Um tipo de pedra preciosa",
-        "Um ponto físico fixo na superfície terrestre com coordenadas conhecidas com precisão",
-        "Uma estrela usada para navegação",
-        "Um aplicativo de celular"
-      ],
-      correctAnswer: 1,
-      explanation: "Marcos geodésicos são pontos materializados no terreno (geralmente com uma placa ou estrutura) cujas coordenadas foram medidas com alta precisão, servindo de referência para levantamentos."
+    question: "Qual é a vantagem de usar LiDAR embarcado em drones para inspeção de linhas de transmissão?",
+    options: [
+      "Captura apenas cores",
+      "Mede distâncias precisas com laser, criando modelos 3D mesmo sob vegetação densa",
+      "Funciona apenas em ambientes fechados",
+      "Detecta apenas temperatura"
+    ],
+    correctAnswer: 1,
+    explanation: "LiDAR usa pulsos laser para medir distâncias precisas, criando nuvens de pontos 3D detalhadas que penetram vegetação, permitindo modelar terreno, cabos e identificar proximidade de árvores."
   },
   {
     id: 15,
-    question: "Qual é a diferença entre GPS e GNSS?",
-      options: [
-        "Não há diferença, são sinônimos",
-        "GPS é o sistema americano, GNSS é o termo geral para todos os sistemas de satélite",
-        "GPS é mais antigo que GNSS",
-        "GNSS só funciona na Europa"
-      ],
-      correctAnswer: 1,
-      explanation: "GPS (Global Positioning System) é o sistema americano específico. GNSS é o termo abrangente que inclui GPS, GLONASS, Galileo, BeiDou e outros sistemas."
+    question: "Quais são os principais desafios na operação de drones próximos a linhas energizadas?",
+    options: [
+      "Não há desafios específicos",
+      "Interferência eletromagnética, risco de colisão, rajadas de vento, necessidade de pilotos qualificados",
+      "Apenas custo dos equipamentos",
+      "Falta de luz solar"
+    ],
+    correctAnswer: 1,
+    explanation: "Linhas de alta tensão geram campos eletromagnéticos que podem afetar navegação do drone, além de riscos de colisão, turbulência de vento, exigindo pilotos treinados e protocolos de segurança rigorosos."
   },
   {
     id: 16,
-    question: "O que é WGS84?",
+    question: "O que são isoladores em torres de transmissão e como drones auxiliam na sua inspeção?",
     options: [
-      "Um tipo de satélite GPS",
-      "Um sistema de datum geodésico global",
-      "Uma frequência de rádio",
-      "Um protocolo de comunicação",
+      "Peças decorativas, drones não ajudam",
+      "Componentes que isolam eletricamente os cabos da torre; drones capturam imagens detalhadas para detectar trincas, poluição, quebras",
+      "Cabos de aço",
+      "Fundações das torres"
     ],
     correctAnswer: 1,
-    explanation:
-      "WGS84 (World Geodetic System 1984) é o sistema de referência geodésico global usado pelo GPS, definindo o formato e dimensões da Terra.",
+    explanation: "Isoladores são componentes cerâmicos ou poliméricos que isolam eletricamente cabos energizados da estrutura metálica. Drones permitem inspeção visual detalhada sem escalada, identificando rachaduras, poluição, quebras."
   },
   {
     id: 17,
-    question: "Quantos satélites GPS estão normalmente em operação?",
-    options: ["Aproximadamente 12", "Aproximadamente 18", "Aproximadamente 24", "Aproximadamente 30"],
-    correctAnswer: 3,
-    explanation:
-      "A constelação GPS mantém tipicamente 30 ou mais satélites operacionais, embora o sistema tenha sido projetado para funcionar com um mínimo de 24.",
+    question: "Como a inteligência artificial pode classificar a severidade de defeitos detectados em inspeções?",
+    options: [
+      "IA não pode classificar severidade",
+      "Algoritmos treinados classificam defeitos em categorias (leve, moderado, crítico) baseado em padrões aprendidos",
+      "Apenas técnicos humanos podem classificar",
+      "Por cores aleatórias"
+    ],
+    correctAnswer: 1,
+    explanation: "Modelos de IA podem ser treinados para classificar automaticamente a severidade de defeitos (ex: corrosão leve vs avançada, trinca superficial vs profunda), priorizando manutenções críticas."
   },
   {
     id: 18,
-    question: "O que é WAAS?",
+    question: "Qual é o papel da redundância de sensores em drones de inspeção profissional?",
     options: [
-      "Wide Area Augmentation System",
-      "World Aviation Accuracy System",
-      "Wireless Aerial Access System",
-      "Western Atlantic Aviation Service",
+      "Não há necessidade de redundância",
+      "Aumenta segurança e confiabilidade, permitindo operação mesmo com falha de um componente",
+      "Serve apenas para aumentar peso",
+      "É proibido por regulamentação"
     ],
-    correctAnswer: 0,
-    explanation:
-      "WAAS (Wide Area Augmentation System) é um sistema de correção diferencial do GPS desenvolvido pela FAA para melhorar a precisão na América do Norte.",
+    correctAnswer: 1,
+    explanation: "Drones profissionais usam redundância (múltiplos GPS, IMUs, baterias) para garantir segurança e confiabilidade em operações críticas, permitindo retorno seguro mesmo com falha de componentes."
   },
   {
     id: 19,
-    question: "Qual é a velocidade de propagação dos sinais GPS no vácuo?",
+    question: "O que é GSD (Ground Sample Distance) e sua importância em inspeções com drone?",
     options: [
-      "Velocidade do som",
-      "Velocidade da luz",
-      "Metade da velocidade da luz",
-      "Duas vezes a velocidade da luz",
+      "Velocidade do drone",
+      "Resolução espacial: tamanho real representado por cada pixel da imagem",
+      "Altitude máxima de voo",
+      "Distância entre torres"
     ],
     correctAnswer: 1,
-    explanation:
-      "Os sinais GPS propagam-se à velocidade da luz (aproximadamente 300.000 km/s no vácuo), permitindo calcular distâncias com base no tempo de viagem do sinal.",
+    explanation: "GSD (Ground Sample Distance) é a resolução espacial: tamanho real no terreno representado por cada pixel. GSD menor (ex: 1cm/pixel) captura mais detalhes, essencial para detectar pequenas trincas e anomalias."
   },
   {
     id: 20,
-    question: 'O que significa "dilution of precision" (DOP)?',
+    question: "Como algoritmos de detecção de objetos (object detection) auxiliam na análise automática de imagens de torres?",
     options: [
-      "Perda de sinal do satélite",
-      "Métrica da geometria dos satélites que afeta a precisão",
-      "Interferência atmosférica",
-      "Erro de calibração do receptor",
+      "Apenas comprimem as imagens",
+      "Identificam e localizam automaticamente componentes específicos (isoladores, conectores, cabos) nas imagens",
+      "Deletam imagens ruins",
+      "Convertem para preto e branco"
     ],
     correctAnswer: 1,
-    explanation:
-      "DOP (Dilution of Precision) é uma métrica que indica como a geometria dos satélites visíveis afeta a precisão do posicionamento. Quanto menor o DOP, melhor a precisão.",
+    explanation: "Algoritmos de object detection (YOLO, Faster R-CNN) identificam e localizam automaticamente componentes específicos nas imagens (isoladores, conectores, espaçadores), facilitando inspeção automatizada e inventário."
   },
 ]
 
@@ -371,9 +391,9 @@ export default function Drone({ onBack }: QuizProps) {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
             <Navigation className="w-8 h-8 text-primary" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 1: Localização na Superfície Terrestre</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 5: Drones na Inspeção de Infraestrutura Elétrica</h1>
           <p className="text-muted-foreground text-lg">
-            Distâncias, Direções e Tempo - Sistemas de Coordenadas - GNSS
+            Sensores Embarcados - Câmeras Nadir e Oblíquas - Visão Computacional - Detecção de Anomalias
           </p>
         </div>
 

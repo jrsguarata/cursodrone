@@ -23,223 +23,243 @@ interface AnsweredQuestion {
 const questions: Question[] = [
   {
     id: 1,
-      question: "Como os primeiros navegadores se localizavam antes da invenção de instrumentos modernos?",
-      options: [
-        "Usando GPS",
-        "Observando estrelas, sol e pontos de referência naturais",
-        "Usando mapas digitais",
-        "Com bússolas eletrônicas"
-      ],
-      correctAnswer: 1,
-      explanation: "Antigos navegadores usavam a posição do sol durante o dia, as estrelas à noite e pontos de referência como montanhas e ilhas para se orientar."
+    question: "Qual é a principal diferença entre dados vetoriais e dados raster?",
+    options: [
+      "Vetoriais são para mapas impressos, raster para digitais",
+      "Vetoriais representam feições por pontos, linhas e polígonos; raster por matriz de células (pixels)",
+      "Vetoriais são mais antigos que raster",
+      "Não há diferença significativa"
+    ],
+    correctAnswer: 1,
+    explanation: "Dados vetoriais representam feições geográficas através de geometrias (pontos, linhas, polígonos) com coordenadas precisas. Dados raster representam o espaço como uma grade regular de células (pixels), cada uma com um valor."
   },
   {
     id: 2,
-    question: "Qual é a linha de referência horizontal no sistema de coordenadas geográficas?",
-    options: ["Meridiano de Greenwich", "Equador", "Trópico de Câncer", "Círculo Polar Ártico"],
+    question: "O que é resolução espacial em imagens raster?",
+    options: [
+      "A quantidade de cores na imagem",
+      "O tamanho do pixel no terreno (área representada por cada célula)",
+      "A velocidade de processamento",
+      "O formato do arquivo"
+    ],
     correctAnswer: 1,
-    explanation:
-      "O Equador é a linha de referência horizontal (latitude 0°) que divide a Terra em hemisférios Norte e Sul.",
+    explanation: "Resolução espacial refere-se ao tamanho do pixel no terreno. Por exemplo, uma imagem com resolução de 30m significa que cada pixel representa uma área de 30m x 30m no solo."
   },
   {
     id: 3,
-    question: "O que significa GNSS?",
+    question: "O que é a operação de buffer em SIG?",
     options: [
-      "Global Network Satellite System",
-      "General Navigation Support System",
-      "Global Navigation Satellite System",
-      "Geographic National Security System",
+      "Criar uma zona de influência ao redor de feições geográficas",
+      "Apagar dados desnecessários",
+      "Aumentar o brilho da imagem",
+      "Comprimir arquivos vetoriais"
     ],
-    correctAnswer: 2,
-    explanation:
-      "GNSS significa Global Navigation Satellite System (Sistema Global de Navegação por Satélite), um termo genérico que engloba todos os sistemas de posicionamento por satélite.",
+    correctAnswer: 0,
+    explanation: "Buffer cria uma zona (ou área de influência) ao redor de uma feição geográfica a uma distância especificada. É útil para análises de proximidade, áreas de proteção, zonas de segurança, etc."
   },
   {
     id: 4,
-    question: "Quantos satélites GPS são necessários para determinar uma posição tridimensional?",
-    options: ["2 satélites", "3 satélites", "4 satélites", "5 satélites"],
-    correctAnswer: 2,
-    explanation:
-      "São necessários no mínimo 4 satélites: 3 para determinar latitude, longitude e altitude, e 1 adicional para sincronização do relógio do receptor.",
+    question: "O que faz a operação de união (union) entre camadas vetoriais?",
+    options: [
+      "Combina duas camadas mantendo todas as feições e seus atributos",
+      "Apaga feições duplicadas",
+      "Mescla pixels de imagens",
+      "Converte vetores em raster"
+    ],
+    correctAnswer: 0,
+    explanation: "A operação de união combina duas ou mais camadas vetoriais, preservando todas as geometrias e criando novas feições onde há sobreposição, mantendo os atributos de ambas as camadas."
   },
   {
     id: 5,
-    question: "Qual é o sistema de posicionamento por satélite desenvolvido pela Rússia?",
-    options: ["GPS", "Galileo", "GLONASS", "BeiDou"],
-    correctAnswer: 2,
-    explanation:
-      "GLONASS (Global Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela Rússia, equivalente ao GPS americano.",
+    question: "O que é classificação supervisionada de imagens?",
+    options: [
+      "Classificação automática sem intervenção humana",
+      "Classificação baseada em amostras de treinamento fornecidas pelo analista",
+      "Classificação feita por satélites",
+      "Organização de arquivos em pastas"
+    ],
+    correctAnswer: 1,
+    explanation: "Classificação supervisionada usa amostras de treinamento (áreas conhecidas) fornecidas pelo analista para treinar algoritmos que classificam toda a imagem em categorias predefinidas (água, floresta, urbano, etc.)."
   },
   {
     id: 6,
-    question: "O que é latitude?",
+    question: "O que caracteriza a classificação não supervisionada?",
     options: [
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Distância angular norte-sul do Equador",
-      "Altitude em relação ao nível do mar",
-      "Ângulo em relação ao polo magnético",
+      "O analista define todas as classes antes",
+      "O algoritmo agrupa pixels por similaridade espectral sem amostras prévias",
+      "Não é possível classificar imagens desse modo",
+      "É feita manualmente pixel por pixel"
     ],
     correctAnswer: 1,
-    explanation:
-      "Latitude é a distância angular medida em graus ao norte ou sul do Equador, variando de 0° (no Equador) até 90° (nos polos).",
+    explanation: "Classificação não supervisionada agrupa automaticamente pixels em classes baseando-se em similaridade espectral, sem amostras de treinamento. O analista interpreta as classes resultantes posteriormente."
   },
   {
     id: 7,
-   question: "Por que foi mais difícil descobrir como medir a longitude do que a latitude?",
-      options: [
-        "Porque a longitude depende do tempo preciso e não havia relógios adequados",
-        "Porque não existiam mapas",
-        "Porque a Terra é redonda",
-        "Porque não havia matemáticos competentes"
-      ],
-      correctAnswer: 0,
-      explanation: "Para calcular longitude, era necessário comparar o horário local com um horário de referência. Sem relógios precisos no mar, isso era impossível até o século XVIII."
+    question: "O que é retificação geométrica (ou georreferenciamento) de imagens?",
+    options: [
+      "Melhorar o contraste da imagem",
+      "Corrigir distorções geométricas e atribuir coordenadas geográficas precisas",
+      "Converter imagem colorida em preto e branco",
+      "Reduzir o tamanho do arquivo"
+    ],
+    correctAnswer: 1,
+    explanation: "Retificação ou georreferenciamento corrige distorções geométricas da imagem e atribui coordenadas geográficas precisas usando pontos de controle, permitindo integração com outros dados espaciais."
   },
   {
     id: 8,
-    question: "O que é longitude?",
+    question: "O que são pontos de controle no georreferenciamento?",
     options: [
-      "Distância angular norte-sul do Equador",
-      "Distância angular leste-oeste do Meridiano de Greenwich",
-      "Comprimento de um meridiano",
-      "Distância entre dois paralelos",
+      "Pixels mais brilhantes da imagem",
+      "Pontos identificáveis na imagem com coordenadas conhecidas no terreno",
+      "Centros urbanos",
+      "Satélites de referência"
     ],
     correctAnswer: 1,
-    explanation:
-      "Longitude é a distância angular medida em graus a leste ou oeste do Meridiano de Greenwich (0°), variando de 0° a 180° para leste e oeste.",
+    explanation: "Pontos de controle são feições facilmente identificáveis tanto na imagem quanto no terreno (cruzamentos, edificações, etc.) cujas coordenadas precisas são conhecidas, usados para georreferenciar a imagem."
   },
   {
     id: 9,
-    question: "Qual sistema GNSS é desenvolvido pela União Europeia?",
-    options: ["GPS", "GLONASS", "Galileo", "QZSS"],
-    correctAnswer: 2,
-    explanation:
-      "Galileo é o sistema de navegação por satélite desenvolvido pela União Europeia, projetado para ser independente e interoperável com outros sistemas GNSS.",
+    question: "O que faz a operação de interseção (intersect) entre camadas vetoriais?",
+    options: [
+      "Mantém apenas as áreas comuns a ambas as camadas",
+      "Remove todas as sobreposições",
+      "Cria cópias das camadas",
+      "Converte polígonos em pontos"
+    ],
+    correctAnswer: 0,
+    explanation: "Interseção cria uma nova camada contendo apenas as áreas que são comuns (sobrepostas) entre as camadas de entrada, preservando atributos de ambas nas áreas de interseção."
   },
   {
     id: 10,
-    question: "Qual invenção do século XVIII revolucionou a navegação ao permitir calcular a longitude?",
-      options: [
-        "O telescópio",
-        "O cronômetro marítimo preciso",
-        "O GPS",
-        "A câmera fotográfica"
-      ],
-      correctAnswer: 1,
-      explanation: "John Harrison inventou o cronômetro marítimo (relógio de precisão) que mantinha a hora exata mesmo no mar, permitindo calcular a longitude com precisão."
+    question: "O que é a operação de diferença (difference) em análise vetorial?",
+    options: [
+      "Calcula a distância entre feições",
+      "Remove da primeira camada as áreas que se sobrepõem à segunda",
+      "Subtrai valores de atributos",
+      "Compara resoluções de imagens"
+    ],
+    correctAnswer: 1,
+    explanation: "A operação de diferença remove da primeira camada as áreas que se sobrepõem à segunda camada, mantendo apenas as partes da primeira que não coincidem com a segunda."
   },
   {
     id: 11,
-    question: "Quantos graus tem um círculo completo de longitude?",
-    options: ["90 graus", "180 graus", "270 graus", "360 graus"],
-    correctAnswer: 3,
-    explanation:
-      "Um círculo completo de longitude tem 360 graus: 180° para leste e 180° para oeste do Meridiano de Greenwich.",
+    question: "O que é resolução espectral de sensores remotos?",
+    options: [
+      "O tamanho do pixel",
+      "O número e largura de bandas espectrais que o sensor capta",
+      "A altitude do satélite",
+      "A velocidade de captura"
+    ],
+    correctAnswer: 1,
+    explanation: "Resolução espectral refere-se ao número de bandas espectrais (regiões do espectro eletromagnético) e suas larguras que o sensor consegue capturar. Mais bandas permitem melhor discriminação de alvos."
   },
   {
     id: 12,
-    question: "O que é o Meridiano de Greenwich?",
+    question: "O que é uma composição colorida RGB em sensoriamento remoto?",
     options: [
-      "Linha que divide os hemisférios Norte e Sul",
-      "Linha de referência para a longitude (0°)",
-      "Linha que passa pelos polos magnéticos",
-      "Linha do Equador",
+      "Combinação de três bandas espectrais exibidas como vermelho, verde e azul",
+      "Uma foto tirada com câmera colorida normal",
+      "Um mapa temático com três cores",
+      "Um tipo de classificação"
     ],
-    correctAnswer: 1,
-    explanation:
-      "O Meridiano de Greenwich é a linha de referência (longitude 0°) que passa pelo Observatório Real de Greenwich, Londres, dividindo a Terra em hemisférios Oriental e Ocidental.",
+    correctAnswer: 0,
+    explanation: "Composição RGB combina três bandas espectrais (que podem ser de qualquer região do espectro) nos canais vermelho (R), verde (G) e azul (B) da tela, criando imagens coloridas para interpretação."
   },
   {
     id: 13,
-    question: "Qual é o sistema GNSS chinês?",
-    options: ["GPS", "BeiDou", "IRNSS", "QZSS"],
+    question: "O que é o NDVI (Índice de Vegetação por Diferença Normalizada)?",
+    options: [
+      "Um tipo de sensor",
+      "Um índice calculado por bandas infravermelho e vermelho para avaliar vigor vegetativo",
+      "Uma técnica de classificação",
+      "Um formato de arquivo"
+    ],
     correctAnswer: 1,
-    explanation:
-      "BeiDou (ou BDS - BeiDou Navigation Satellite System) é o sistema de navegação por satélite desenvolvido pela China, oferecendo cobertura global.",
+    explanation: "NDVI é calculado pela diferença entre reflectância no infravermelho próximo e vermelho, normalizado pela soma. Varia de -1 a +1, sendo valores altos indicativos de vegetação densa e saudável."
   },
   {
     id: 14,
-    question: "O que é um marco geodésico?",
-      options: [
-        "Um tipo de pedra preciosa",
-        "Um ponto físico fixo na superfície terrestre com coordenadas conhecidas com precisão",
-        "Uma estrela usada para navegação",
-        "Um aplicativo de celular"
-      ],
-      correctAnswer: 1,
-      explanation: "Marcos geodésicos são pontos materializados no terreno (geralmente com uma placa ou estrutura) cujas coordenadas foram medidas com alta precisão, servindo de referência para levantamentos."
+    question: "O que é reamostragem (resampling) de imagens raster?",
+    options: [
+      "Tirar novas fotos da mesma área",
+      "Alterar o tamanho do pixel da imagem para uma nova resolução",
+      "Classificar a imagem novamente",
+      "Corrigir cores"
+    ],
+    correctAnswer: 1,
+    explanation: "Reamostragem altera o tamanho e número de pixels da imagem, criando uma nova grade. Métodos incluem vizinho mais próximo, bilinear e cúbica, cada um preservando diferentes características."
   },
   {
     id: 15,
-    question: "Qual é a diferença entre GPS e GNSS?",
-      options: [
-        "Não há diferença, são sinônimos",
-        "GPS é o sistema americano, GNSS é o termo geral para todos os sistemas de satélite",
-        "GPS é mais antigo que GNSS",
-        "GNSS só funciona na Europa"
-      ],
-      correctAnswer: 1,
-      explanation: "GPS (Global Positioning System) é o sistema americano específico. GNSS é o termo abrangente que inclui GPS, GLONASS, Galileo, BeiDou e outros sistemas."
+    question: "O que faz a operação de clip (recorte) em SIG?",
+    options: [
+      "Extrai uma porção dos dados usando os limites de outra camada",
+      "Remove dados duplicados",
+      "Comprime arquivos",
+      "Converte formatos"
+    ],
+    correctAnswer: 0,
+    explanation: "Clip extrai uma porção dos dados (raster ou vetor) usando os limites de uma camada de polígono como 'máscara de corte', mantendo apenas os dados dentro da área especificada."
   },
   {
     id: 16,
-    question: "O que é WGS84?",
+    question: "O que é dissolve (dissolução) em análise vetorial?",
     options: [
-      "Um tipo de satélite GPS",
-      "Um sistema de datum geodésico global",
-      "Uma frequência de rádio",
-      "Um protocolo de comunicação",
+      "Apagar feições",
+      "Agregar feições adjacentes com mesmo atributo em uma única feição",
+      "Separar polígonos complexos",
+      "Converter para raster"
     ],
     correctAnswer: 1,
-    explanation:
-      "WGS84 (World Geodetic System 1984) é o sistema de referência geodésico global usado pelo GPS, definindo o formato e dimensões da Terra.",
+    explanation: "Dissolve agrega (mescla) feições adjacentes ou sobrepostas que compartilham o mesmo valor de atributo, criando uma feição única e eliminando fronteiras internas entre elas."
   },
   {
     id: 17,
-    question: "Quantos satélites GPS estão normalmente em operação?",
-    options: ["Aproximadamente 12", "Aproximadamente 18", "Aproximadamente 24", "Aproximadamente 30"],
-    correctAnswer: 3,
-    explanation:
-      "A constelação GPS mantém tipicamente 30 ou mais satélites operacionais, embora o sistema tenha sido projetado para funcionar com um mínimo de 24.",
+    question: "O que é correção atmosférica em processamento de imagens?",
+    options: [
+      "Ajustar brilho e contraste",
+      "Remover efeitos da atmosfera nos valores de reflectância registrados pelo sensor",
+      "Prever condições climáticas",
+      "Eliminar nuvens"
+    ],
+    correctAnswer: 1,
+    explanation: "Correção atmosférica remove os efeitos de espalhamento e absorção atmosférica, convertendo valores registrados pelo sensor em reflectância de superfície, permitindo comparações multitemporais."
   },
   {
     id: 18,
-    question: "O que é WAAS?",
+    question: "O que é merge (mesclar) de camadas vetoriais?",
     options: [
-      "Wide Area Augmentation System",
-      "World Aviation Accuracy System",
-      "Wireless Aerial Access System",
-      "Western Atlantic Aviation Service",
+      "Combinar múltiplas camadas do mesmo tipo de geometria em uma única camada",
+      "Sobrepor camadas sem modificá-las",
+      "Criar buffer",
+      "Classificar dados"
     ],
     correctAnswer: 0,
-    explanation:
-      "WAAS (Wide Area Augmentation System) é um sistema de correção diferencial do GPS desenvolvido pela FAA para melhorar a precisão na América do Norte.",
+    explanation: "Merge combina duas ou mais camadas com o mesmo tipo de geometria (pontos, linhas ou polígonos) e estrutura de atributos similar em uma única camada, mantendo todas as feições."
   },
   {
     id: 19,
-    question: "Qual é a velocidade de propagação dos sinais GPS no vácuo?",
+    question: "O que é mosaico (mosaic) de imagens raster?",
     options: [
-      "Velocidade do som",
-      "Velocidade da luz",
-      "Metade da velocidade da luz",
-      "Duas vezes a velocidade da luz",
+      "Uma técnica de classificação",
+      "Juntar múltiplas imagens adjacentes em uma única imagem contínua",
+      "Dividir uma imagem grande",
+      "Aplicar filtros artísticos"
     ],
     correctAnswer: 1,
-    explanation:
-      "Os sinais GPS propagam-se à velocidade da luz (aproximadamente 300.000 km/s no vácuo), permitindo calcular distâncias com base no tempo de viagem do sinal.",
+    explanation: "Mosaico combina múltiplas imagens raster adjacentes ou sobrepostas em uma única imagem contínua, ajustando bordas e valores para criar transições suaves entre as cenas."
   },
   {
     id: 20,
-    question: 'O que significa "dilution of precision" (DOP)?',
+    question: "O que são filtros espaciais em processamento de imagens raster?",
     options: [
-      "Perda de sinal do satélite",
-      "Métrica da geometria dos satélites que afeta a precisão",
-      "Interferência atmosférica",
-      "Erro de calibração do receptor",
+      "Ferramentas para comprimir imagens",
+      "Operações que modificam valores de pixels baseando-se em vizinhança (suavização, realce, detecção de bordas)",
+      "Métodos de classificação",
+      "Técnicas de georreferenciamento"
     ],
     correctAnswer: 1,
-    explanation:
-      "DOP (Dilution of Precision) é uma métrica que indica como a geometria dos satélites visíveis afeta a precisão do posicionamento. Quanto menor o DOP, melhor a precisão.",
+    explanation: "Filtros espaciais aplicam operações matemáticas em cada pixel considerando seus vizinhos, usando janelas móveis (kernels). Exemplos: suavização (média), realce (high-pass), detecção de bordas (Sobel)."
   },
 ]
 
@@ -371,9 +391,9 @@ export default function Tratamento({ onBack }: QuizProps) {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
             <Navigation className="w-8 h-8 text-primary" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 1: Localização na Superfície Terrestre</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground text-balance">Módulo 3: Tratamento de Dados Espaciais</h1>
           <p className="text-muted-foreground text-lg">
-            Distâncias, Direções e Tempo - Sistemas de Coordenadas - GNSS
+            Dados Vetoriais e Raster - Classificação de Imagens - Operações de Análise Espacial
           </p>
         </div>
 
